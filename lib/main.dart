@@ -38,7 +38,8 @@ class MyApp extends StatelessWidget {
             title: 'home',
             theme: lightTheme,
             darkTheme: darkTheme,
-            themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+            themeMode:
+                AppCubit.get(context).isDark ? ThemeMode.dark : ThemeMode.light,
             home: LoginScreen(),
             localizationsDelegates: const [
               AppLocale.delegate,
