@@ -1,4 +1,5 @@
 import 'package:app1/main.dart';
+import 'package:app1/network/local/cache_Helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,5 +17,18 @@ class AppCubit extends Cubit<AppStates> {
       currentLang = const Locale('ar', '');
     }
     emit(AppChangeLanguageState());
+  }
+
+  var isDark = true;
+  void ChangeAppThem({bool? fromCache}) {
+    if (fromCache != null) {
+      isDark = fromCache;
+      emit(AppChangeThemState());
+    } else {
+      isDark = !isDark;
+      CacheHelper.setBoolean(key: 'isDark', value: isDark).then((value) {
+        emit(AppChangeThemState());
+      });
+    }
   }
 }

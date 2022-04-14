@@ -11,7 +11,22 @@
         "welcomeToAboutUsPage" : "مرحبا بك في صفحه عن التطبيق",
         "welcomeToContactUsPage" : "مرحبا بك في صفحه اتصل بنا ",
         "contactUs" : "اتصل بنا",
-        "aboutUs" : " عن التطبيق"
+        "aboutUs" : " عن التطبيق",
+        "login" : "تسجيل الدخول",
+        "register" : " حساب جديد",
+        "loginToSeeOurHotOffers" : "سجل الان لتري عروضنا المميزه",
+        "registerToSeeOurHotOffers" : "انشا حساب الان لتري عروضنا المميزه",
+        "emailAddress" : "البريد الالكتروني",
+        "password" : "كلمه السر",
+        "name" : "الاسم",
+        "phone" : "الموبيل",
+        "emailNotEmpty" : "يجب ان تدخل البريد الالكتروني",
+        "passwordNotEmpty" : "يجب ان تدخل كلمه السر",
+        "doNotHaveAnAccount" : "ليس لديك حساب..!",
+        "nameNotEmpty" : "يجب ان تدخل الاسم",
+        "phoneNotEmpty" : "يجب ان تدخل الموبيل",
+        "HaveAnAccount" : "لديك حساب ..!"  ,      
+        "mode" : "اللون"       
 
 
 

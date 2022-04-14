@@ -2,7 +2,6 @@ import 'package:app1/appCubit/app_cubit.dart';
 import 'package:app1/appCubit/app_states.dart';
 import 'package:app1/app_locale/app_locale.dart';
 import 'package:app1/components/components.dart';
-import 'package:app1/homePage/homePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
