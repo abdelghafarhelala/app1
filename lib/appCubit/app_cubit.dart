@@ -20,7 +20,7 @@ class AppCubit extends Cubit<AppStates> {
   }
 
   var isDark = true;
-  void ChangeAppThem({bool? fromCache}) {
+  void changeAppTheme({bool? fromCache}) {
     if (fromCache != null) {
       isDark = fromCache;
       emit(AppChangeThemState());

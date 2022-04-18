@@ -26,7 +26,9 @@
         "nameNotEmpty" : "يجب ان تدخل الاسم",
         "phoneNotEmpty" : "يجب ان تدخل الموبيل",
         "HaveAnAccount" : "لديك حساب ..!"  ,      
-        "mode" : "اللون"       
+        "mode" : "اللون"   ,
+        "services" : "الخدمات"
+
 
 
 

@@ -19,13 +19,23 @@ class Menu extends StatelessWidget {
           child: ListView(
             children: [
               UserAccountsDrawerHeader(
-                accountName: const Text(
-                  'User Name',
-                  style: TextStyle(color: Colors.black),
+                accountName: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      'User Name',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
                 ),
-                accountEmail: const Text(
-                  'example@gmail.com',
-                  style: TextStyle(color: Colors.black),
+                accountEmail: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      'example@gmail.com',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
                 ),
                 currentAccountPicture: CircleAvatar(
                   child: ClipOval(
@@ -68,7 +78,7 @@ class Menu extends StatelessWidget {
                 leading: const Icon(Icons.brightness_high_sharp),
                 title: Text('${getLang(context, 'mode')}'),
                 onTap: () {
-                  AppCubit.get(context).ChangeAppThem();
+                  AppCubit.get(context).changeAppTheme();
                 },
               ),
             ],

@@ -25,7 +25,8 @@
     "nameNotEmpty" : "Name can't be empty",
     "phoneNotEmpty" : "Phone can't be empty",
     "HaveAnAccount" : "Have an Account ..?",
-    "mode" : "Mode"
+    "mode" : "Mode",
+    "services" : "Services"
 
 
 }
