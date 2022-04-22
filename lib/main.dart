@@ -14,7 +14,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
   mySharedPreferences = await SharedPreferences.getInstance();
-  bool isDark = CacheHelper.getData(key: 'isDark');
+  bool isDark = false;
+  if (CacheHelper.getData(key: 'isDark') != null) {
+    isDark = CacheHelper.getData(key: 'isDark');
+  } else {
+    isDark = isDark;
+  }
   runApp(MyApp(
     isDark: isDark,
   ));
