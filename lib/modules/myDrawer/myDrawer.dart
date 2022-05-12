@@ -59,6 +59,8 @@ class MyDrawer extends StatelessWidget {
       padding: const EdgeInsets.only(top: 15),
       child: Column(
         children: [
+          menuItem(
+              context, Icons.home, '${getLang(context, 'home')}', HomePage()),
           menuItem(context, Icons.support_rounded,
               '${getLang(context, 'service')}', ServiceScreen()),
           menuItem2(context, Icons.language_outlined,

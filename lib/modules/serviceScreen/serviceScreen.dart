@@ -1,4 +1,7 @@
 import 'package:app1/app_locale/app_locale.dart';
+import 'package:app1/components/components.dart';
+import 'package:app1/modules/myDrawer/myDrawer.dart';
+import 'package:app1/modules/serviceDetails/serviceDetails.dart';
 import 'package:flutter/material.dart';
 
 class ServiceScreen extends StatelessWidget {
@@ -7,6 +10,18 @@ class ServiceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        drawer: Drawer(
+          child: SingleChildScrollView(
+            child: Container(
+              child: Column(
+                children: [
+                  MyDrawer(),
+                  MyDrawer().myDrawerList(context),
+                ],
+              ),
+            ),
+          ),
+        ),
         appBar: AppBar(
           title: Text('${getLang(context, 'services')}'),
         ),
@@ -71,7 +86,9 @@ class ServiceScreen extends StatelessWidget {
 
   Widget buildServiceItem2(context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        navigateTo(context, ServiceDetails());
+      },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Card(
@@ -80,8 +97,8 @@ class ServiceScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Image.network(
-                  'https://img.freepik.com/free-vector/flat-customer-support-illustration_23-2148899114.jpg?t=st=1650286763~exp=1650287363~hmac=244f771ec1effc2b72dfd83c519903aef8bc743141ef3cd98d795f7029171852&w=740',
+                Image.asset(
+                  'assets/images/service.jpg',
                   fit: BoxFit.cover,
                   height: 120,
                   width: double.infinity,

@@ -1,7 +1,10 @@
 import 'package:app1/appCubit/app_cubit.dart';
 import 'package:app1/appCubit/app_states.dart';
 import 'package:app1/app_locale/app_locale.dart';
+import 'package:app1/modules/aboutUsScreen/aboutUs.dart';
+import 'package:app1/modules/contactUsScreen/contactUs.dart';
 import 'package:app1/modules/login/login.dart';
+import 'package:app1/modules/serviceDetails/serviceDetails.dart';
 import 'package:app1/network/local/cache_Helper.dart';
 import 'package:app1/shared/style.dart';
 import 'package:flutter/material.dart';

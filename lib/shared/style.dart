@@ -33,6 +33,16 @@ ThemeData lightTheme = ThemeData(
           fontWeight: FontWeight.w600,
           color: Colors.black,
         ),
+        bodyText2: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w300,
+          color: Colors.black,
+        ),
+        headline1: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w300,
+          color: Colors.black87,
+        ),
         caption: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w600,
@@ -45,64 +55,70 @@ ThemeData lightTheme = ThemeData(
     ));
 
 ThemeData darkTheme = ThemeData(
-    appBarTheme: const AppBarTheme(
-      color: Color.fromARGB(255, 37, 36, 36),
-      toolbarTextStyle: TextStyle(
-        color: lightTextColor,
-      ),
+  appBarTheme: const AppBarTheme(
+    color: Color.fromARGB(255, 37, 36, 36),
+    toolbarTextStyle: TextStyle(
+      color: lightTextColor,
     ),
-    inputDecorationTheme: const InputDecorationTheme(
+  ),
+  inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(
           color: Colors.grey,
         ),
       ),
-      labelStyle: TextStyle(color: Colors.white),
+      labelStyle: TextStyle(color: Colors.grey),
       iconColor: Colors.grey,
       prefixIconColor: Colors.grey,
+      hintStyle: TextStyle(color: Colors.grey)),
+  primarySwatch: primaryColor,
+  buttonTheme: const ButtonThemeData(
+    buttonColor: Colors.amber,
+    textTheme: ButtonTextTheme.primary,
+  ),
+  scaffoldBackgroundColor: Color.fromARGB(255, 37, 36, 36),
+  primaryColor: primaryColor,
+  textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+    foregroundColor: MaterialStateProperty.all<Color>(primaryColor),
+  )),
+  textTheme: const TextTheme(
+    button: TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w400,
+      color: Colors.white,
     ),
-    primarySwatch: primaryColor,
-    buttonTheme: const ButtonThemeData(
-      buttonColor: Colors.amber,
-      textTheme: ButtonTextTheme.primary,
+    bodyText1: TextStyle(
+      fontSize: 25,
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
     ),
-    scaffoldBackgroundColor: Color.fromARGB(255, 37, 36, 36),
-    primaryColor: primaryColor,
-    textButtonTheme: TextButtonThemeData(
-        style: ButtonStyle(
-      foregroundColor: MaterialStateProperty.all<Color>(primaryColor),
-    )),
-    textTheme: const TextTheme(
-      button: TextStyle(
-        fontSize: 15,
-        fontWeight: FontWeight.w400,
-        color: Colors.white,
-      ),
-      bodyText1: TextStyle(
-        fontSize: 25,
-        fontWeight: FontWeight.w600,
-        color: Colors.white,
-      ),
-      bodyText2: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.w300,
-        color: Colors.white,
-      ),
-      caption: TextStyle(
-        fontSize: 15,
-        fontWeight: FontWeight.w600,
-        color: Colors.grey,
-      ),
+    bodyText2: TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w300,
+      color: Colors.white,
     ),
-    outlinedButtonTheme: OutlinedButtonThemeData(
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(Colors.white))),
-    listTileTheme: const ListTileThemeData(
-      textColor: Colors.grey,
+    headline1: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w300,
+      color: Colors.white,
     ),
-    cardColor: const Color.fromARGB(255, 37, 36, 36),
-    cardTheme: const CardTheme(
-      elevation: 5,
-      shadowColor: Colors.grey,
-    ));
+    caption: TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w600,
+      color: Colors.grey,
+    ),
+  ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+      style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.white))),
+  listTileTheme: const ListTileThemeData(
+    textColor: Colors.grey,
+  ),
+  cardColor: const Color.fromARGB(255, 37, 36, 36),
+  cardTheme: const CardTheme(
+    elevation: 5,
+    shadowColor: Colors.grey,
+  ),
+);

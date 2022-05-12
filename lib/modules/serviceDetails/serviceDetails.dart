@@ -1,10 +1,9 @@
-import 'package:app1/appCubit/app_cubit.dart';
 import 'package:app1/app_locale/app_locale.dart';
 import 'package:app1/modules/myDrawer/myDrawer.dart';
 import 'package:flutter/material.dart';
 
-class AboutUsScreen extends StatelessWidget {
-  const AboutUsScreen({Key? key}) : super(key: key);
+class ServiceDetails extends StatelessWidget {
+  const ServiceDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +21,7 @@ class AboutUsScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: false,
         title: Row(
-          children: [
-            Text('${getLang(context, 'aboutUs')}'),
-          ],
+          children: const [Text("Service Details")],
         ),
         actions: [
           IconButton(
@@ -39,6 +36,10 @@ class AboutUsScreen extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              Text(
+                '${getLang(context, 'titleOfService')}',
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
               const SizedBox(
                 height: 20,
               ),
@@ -46,7 +47,7 @@ class AboutUsScreen extends StatelessWidget {
                 elevation: 8,
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: Image.asset(
-                  'assets/images/about.jpg',
+                  'assets/images/service.jpg',
                   fit: BoxFit.cover,
                   height: 250,
                   width: double.infinity,
@@ -58,7 +59,7 @@ class AboutUsScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
-                  'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like',
+                  '${getLang(context, 'lorem')}',
                   textAlign: TextAlign.justify,
                   style: Theme.of(context).textTheme.headline1,
                 ),
